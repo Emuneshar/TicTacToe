@@ -143,13 +143,7 @@ def diagDLine(player):
 
 	pygame.draw.line(display, color, (15, 15), (WIDTH - 15, HEIGHT - 15), 15 )
 
-def restart():
-    display.fill(FILL_COLOR)
-    lines()
-    player = 1
-    for i in range(ROW):
-        for j in range(COLS):
-            board[i][j] = 0
+
 
 
 player = 1
@@ -176,9 +170,6 @@ while True:
                 print(board)
                 markTheBoard()
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_k:
-                restart()
-                winner = False
+        
 
     pygame.display.update()
